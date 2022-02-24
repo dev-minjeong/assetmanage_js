@@ -1,0 +1,165 @@
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css';
+
+
+.mainbox5 h2 {
+    margin: 0 ;
+  color: rgb(122, 172, 182);
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 45px;
+}
+
+ h3,
+h4 {
+  margin: 0 ;
+  color: rgb(122, 172, 182);
+  font-weight: bold;
+  text-align: center;
+  font-family: '나눔스퀘어';
+}
+
+.mainbox5 a:link,
+.mainbox5 a:active,
+.mainbox5 a:visited{
+  color:rgb(255, 255, 255);
+}
+
+.mainbox5 a:hover{
+  color:rgb(255, 255, 255);
+}
+
+
+.team{
+  margin:0px;
+}
+
+.mainbox5 .container {
+	display: table;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	border-spacing: 50px;
+}
+
+.mainbox5 .row {
+	display: table-row;
+}
+
+.team-member {
+  padding: 0;
+  display: table-cell;
+  text-align: center;
+}
+
+.team-member p {
+	margin: 0;
+  font-size: 12px;
+  font-family: '나눔스퀘어';
+}
+
+.team-member figure {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  width: 200px;
+  height: 200px;
+}
+
+.team-member figure img {
+  width: 100%;
+  height: 100%;
+  
+}
+
+.team-member figcaption p {
+  font-size: 15px;
+  text-align: center;
+  font-family: '나눔스퀘어';
+}
+
+.team-member figcaption ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  position:absolute;
+  top: 140px;
+  left: 24%;
+}
+
+
+.team-member figcaption ul li {
+  display: inline-block;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+}
+
+.team-member h4 {
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+.team-member figcaption {
+  padding: 30px;
+  color: transparent;
+  background-color: transparent;
+  position: absolute;
+  z-index: 996;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.team-member figure:hover figcaption {
+  color: #fff;
+  background: rgba(122, 172, 182, 0.856);
+  /* Primary color, can be changed via colors.css */
+  
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  visibility: visible;
+  border-radius: 50%;
+}
+
+.team-member figure:hover figcaption ul li a:hover {
+  color: rgba(0, 0, 0, 0.719);
+}
+
+.team-member figure img {
+  -webkit-transform: scale(1) rotate(0) translateY(0);
+  -moz-transform: scale(1) rotate(0) translateY(0);
+  -o-transform: scale(1) rotate(0) translateY(0);
+  -ms-transform: scale(1) rotate(0) translateY(0);
+  transform: scale(1) rotate(0) translateY(0);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.team-member figure:hover img {
+  -webkit-transform: scale(1.1) rotate(1deg) translateY(12px);
+  -moz-transform: scale(1.1) rotate(1deg) translateY(12px);
+  -o-transform: scale(1.1) rotate(1deg) translateY(12px);
+  -ms-transform: scale(1.1) rotate(1deg) translateY(12px);
+  transform: scale(1.1) rotate(1deg) translateY(12px);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}

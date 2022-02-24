@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    position: absolute;
+    top: 120px;
+    left: 15%;
+    font-size: 270%;
+    color: rgb(122, 172, 182);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.row {
+    margin-left: 5%;
+    margin-right: 5%;
+    position: relative;
+    top: 230px;
+}
+.row img{
+    float: left;
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    position: sticky;
+}
+
+.row > .column {
+    position: relative;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 25%;
+}
+
+/* 이미지 애니메이션 효과*/
+img.hover-shadow {
+    transition: 0.3s;
+}
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*이미지 클릭했을때 배경*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding: 10px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+/*상세페이지 전체*/
+.modal-content {
+    position: relative;
+    width: 1400px;
+    height: 600px;
+    top: 70px;
+    padding: 0 50px;
+}
+
+/*상세 페이지 각각*/
+.mySlides {
+    display: none;
+}
+.myimg {
+    display: flex;
+    position: sticky;
+    justify-content: space-around;
+    align-items: center;
+    width: 700px;
+    height: 600px;
+}
+.myimg img {
+    align-items: center;
+    max-width: 700px;
+    max-height: 600px;
+}
+/*클릭했을때 이미지 상세정보 틀*/
+.page {
+    float: left;
+    height: 600px;
+    width: 500px;
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+    left: 60%;
+    background-color: rgba(0,0,0,0);
+}
+.page p {
+    color: white;
+    font-size: 25px;
+    font-family: '나눔스퀘어';
+}
+.pagetop {
+    position: relative;
+    top: 70px;
+    height: 250px;
+}
+.pagebottom {
+    position: relative;
+    height: 200px;
+    top: 100px;
+}
+/*다운로드 버튼*/
+.page .downloadbtn a{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 2px solid white;
+    background-color: rgba(0,0,0,0);
+    color: white;
+    padding-top: 6px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor:pointer;
+    font-size: 30px;
+    position: relative;
+    left: 85px;
+    text-align: center;
+    text-decoration-line: none;
+}
+.page .downloadbtn a:hover {
+    color:black;
+    background-color: white;
+}
+/*닫기 버튼*/
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 75px;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.close:hover, .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+@media screen and (max-height: 450px) {
+    .page {padding-top: 15px;}
+    .page .downloadbtn {font-size: 18px;}
+}
+
+html,body{ 
+    margin:0; 
+    padding:0; 
+    width:100%; 
+    height:100%;;
+}
+
+/*license 버튼*/
+.licensebtngroup {
+    position: relative;
+    top: 80px;
+    text-align: center;
+    color: white;
+    font-family: '나눔스퀘어';
+}
+.licensebtn {
+    background-color: rgba(0,0,0,0);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-bottom: 1px solid;
+    font-family: '나눔스퀘어';
+}

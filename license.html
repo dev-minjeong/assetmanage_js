@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="css\license.css">
+        <link rel="stylesheet" href="css\menu.css">
+        <link rel="stylesheet" href="css\search.css">
+        <link rel="stylesheet" href="css\login.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="js\search.js"></script>
+        <script src="js\menu.js"></script>
+        <!--<script src="js\login.js"></script>-->
+        <script src="js\register.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+        <script src="js\imgshow.js"></script>
+        <!-- hash 관련 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/sha1.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/sha1-min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/lib-typedarrays-min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    </head>
+    <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
+        <span style="background-color: black;"></span>
+        <!-- 메뉴바 여는버튼-->
+        <span id="menubtn_group" onclick="openMenubtn()" style="color: black;">&#9776; </span>
+
+        <!-- 검색창 여는 버튼-->                                                          
+        <span onclick="javascript:openSearchbtn()" id="searchbtn">Search for Image</span>
+
+        <!-- 메뉴 바-->
+        <div id="myMenubar" class="menubar">
+            <a href="javascript:void(0)" class="closeMenubtn" onclick="closeMenubtn()">&times;</a><br><br>
+            <a href="mainpage.html" target="_self">Home</a><br>
+            <a href="enroll.html" target="_self">Enroll</a><br>
+            <a href="imgcollection.html" target="_self">Art Collection</a><br>
+            <a href="license.html" target="_self">License</a>
+        </div>
+          
+        <!--검색 창-->
+        <div id="searchsection">
+        <div id="mySearchbar" class="searchbar">
+            <span class="closeSearchbtn" onclick="javascript:closeSearchbtn()" >&times;</span>
+            <div class="left-section">
+                <form action="/search/name" method="post">
+                    <br><br><br>
+                    <h2 style="margin-top: 50px;">Search by Name</h2><br>
+                    <input class="name" type="text" name="name" placeholder="&nbsp;&nbsp;&nbsp; Write the name" /><br><br><br><br>
+                    <span class="searchname">Search</span>
+                </form>
+            </div>
+            <div class="v1"></div>
+            <div class="center-section">
+                <form action="/search/image" method="post">
+                    <br><br><br>
+                    <h2 style="margin-top: 50px;">Search by Image File</h2><br>
+                    <input class="imagefile" type="file" value="Select File +" /><br><br><br><br>
+                    <span class="searchfile">Search</span>
+                </form>
+            </div>
+            <div class="v2"></div>
+            <div class="right-section">
+                <form action="/search/keyword" method="post">
+                    <br><br><br>
+                    <h2 style="margin-top: 50px;">Search by Keyword</h2><br>
+                    <input class="keyword" type="text" name="keyword" placeholder="&nbsp;&nbsp;&nbsp;Write the keyword"/><br><br><br><br>
+                    <span class="searchkeyword">Search</span>
+                </form>
+            </div>
+        </div>
+    </div>
+        <div id="license">
+            <h1>콘텐츠 라이선스 및 사용범위 안내</h1>
+            <br>
+            <table border="1">
+                <th>사용범위</th>
+                <th>스탠다드라이선스</th>
+                <th>인쇄특별라이선스</th>
+                <th>전자정보특별라이선스</th>
+                <th>통합특별라이선스</th>
+                <th>무료라이선스</th>
+
+                <tr>
+                    <td>웹사이트및블로그</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>전자문서 및 각종 보고서</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>멀티미디어 및 프리젠테이션</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>온라인 광고,홍보,이벤트</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>온프라인 광고,홍보,이벤트</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td>1만 매 미만</td>
+                </tr>
+                <tr>
+                    <td>개인 및 자사용 화면보호기</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>각종 인쇄물</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>기업 홍보 및 광고 영상</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td>1만 매 미만</td>
+                </tr>
+            </table>
+            <br><br>
+            <div class="btn-group">
+                    <button type="button" onclick="location.href='imgcollection.html' ">Back</button>
+                </div>
+        </div>
+    </body>
+</html>

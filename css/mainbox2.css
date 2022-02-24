@@ -1,0 +1,178 @@
+.mainbox2 {
+    position: relative;
+    width: 1550px;
+    top: 4%;
+}
+
+.mainbox2 .col-md-6 {
+    color: rgb(255, 255, 255);
+    width: 1550px;
+    text-align: center;
+    font-family: '나눔스퀘어';
+    font-weight: bold;
+    font-size: 50px;
+    letter-spacing: 1px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.black {
+  background-color: black;
+  width: 1550px;
+  height: 65px;
+}
+.box2_bg {
+  background: url("https://media.giphy.com/media/MFabj1E9mgUsqwVWHu/giphy.gif") ;
+  background-size: 1550px;
+  height: 100%;
+}
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.timeline {
+  background-color: rgba(0, 0, 0, 0.753);
+  height: 100%;
+}
+
+.timeline ul {
+  padding: 0;
+  margin: 12%;
+}
+
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  height: 270px;
+  background: #fff;
+}
+
+.timeline ul li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: inherit;
+  top: 240px;
+}
+
+.timeline ul li p {
+  color: white;
+  font-size: 40px;
+  position: relative;
+  top: 247px;
+  left: -8px;
+  z-index: 5;
+}
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  top: 0px;
+  width: 550px;
+  height: 350px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.671);
+  z-index: 4;
+}
+
+.timeline ul li div h1 {
+  color:rgb(0, 0, 0); 
+  position:absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top:55px; 
+  width:470px; 
+  font-size: 30px;
+  text-align: center;
+  font-family: '나눔스퀘어';
+  letter-spacing: 1px;
+}
+
+.timeline ul li div h3 {
+  color:rgb(0, 0, 0); 
+  position:absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top:170px; 
+  width:470px; 
+  font-size: 20px;
+  text-align: center;
+  font-family: '나눔스퀘어';
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+
+.timeline ul li:nth-child(odd) div {
+  left: 120px;
+}
+
+.timeline ul li:nth-child(even) div {
+  left: -660px;
+}
+
+.timeline ul li::after {
+  transition: background .5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+  background: rgb(122, 172, 182);
+  z-index: 4;
+}
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li:nth-child(even) div {
+  transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 250px;
+  }
+  .timeline ul li:nth-child(even) div {
+    left: -289px;
+    /*250+45-6*/
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+  .timeline ul li:nth-child(even) div {
+    left: 45px;
+  }
+  .timeline ul li:nth-child(even) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent rgb(122, 172, 182) transparent transparent;
+  }
+}

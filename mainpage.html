@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <head>
+        <title>5Tuple</title>
+        <link rel="stylesheet" href="css\menu.css">
+        <link rel="stylesheet" href="css\search.css">
+        <!--<link rel="stylesheet" href="css\login.css">-->
+        <link rel="stylesheet" href="css\scroll.css">
+        <link rel="stylesheet" href="css\mainbox1.css">
+        <link rel="stylesheet" href="css\mainbox2.css">
+        <link rel="stylesheet" href="css\mainbox3.css">
+        <link rel="stylesheet" href="css\mainbox4.css">
+        <link rel="stylesheet" href="css\mainbox5.css">
+
+        <script src="js\search.js"></script>
+        <script src="js\menu.js"></script>
+        <script src="js\login.js"></script>
+        <script src="js\scroll.js"></script>
+        <script src="js\main3.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    </head>
+    <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
+
+    <!-- 메인페이지1-->
+    <div class="box" style="background-image: url(img/mainbg.jpg); background-size: 1550px;">
+        <div class="mainbox1">
+        <span style="background-image: url(img\mainbg.jpg); width:100%; height: 100%;"></span>
+
+        <!-- 메뉴바 여는버튼-->
+        <span id="menubtn_group" onclick="openMenubtn()">&#9776; </span>
+
+        <!-- 로그인 창 여는 버튼
+        <span onclick="javascript:openLoginbtn()" id="loginbtn">log in</span>-->
+
+        <!--로고-->
+        <div class="logo">
+            <svg version="1.1" viewBox="0 0 700 300">
+              <symbol id="fade-text">
+                <text x="45%" y="40%" text-anchor="middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5Tuple</text>
+                <text x="55%" y="63%" text-anchor="middle" style="font-size: 38px; font-weight:normal;">ART GALLERY WITH BLOCKCHAIN</text>
+              </symbol>
+              <g>
+                <use class="stroke" xlink:href="#fade-text"/>
+                <use class="fill" xlink:href="#fade-text"/>
+              </g>
+            </svg>    
+        </div>
+        
+        
+        <!-- 메뉴 바-->
+        <div id="myMenubar" class="menubar">
+            <a href="javascript:void(0)" class="closeMenubtn" onclick="closeMenubtn()">&times;</a><br><br>
+            <a href="mainpage.html" target="_self">Home</a><br>
+            <a href="enroll.html" target="_self">Enroll</a><br>
+            <a href="imgcollection.html" target="_self">Art Collection</a><br>
+            <a href="license.html" target="_self">License</a>
+        </div>
+
+        <!--검색 창-->
+        <div id="searchsection">
+        <div id="mySearchbar" class="searchbar">
+            <span class="closeSearchbtn" onclick="javascript:closeSearchbtn()" >&times;</span>
+            <div class="left-section">
+                <form action="/search/name" method="post">
+                    <br><br><br>
+                    <h2 style="margin-top: 50px;">Search by Name</h2><br>
+                    <input class="name" type="text" name="name" placeholder="&nbsp;&nbsp;&nbsp; Write the name" /><br><br><br><br><br>
+                    <span class="searchname">Search</span>
+                </form>
+            </div>
+            <div class="v1"></div>
+            <div class="center-section">
+                <form action="/search/image" method="post">
+                    <br><br><br>
+                    <h2 style="margin-top: 50px;">Search by Image File</h2><br>
+                    <input class="imagefile" type="file" value="Select File +" /><br><br><br><br><br>
+                    <span class="searchfile">Search</span>
+                </form>
+            </div>
+            <div class="v2"></div>
+            <div class="right-section">
+                <form action="/search/keyword" method="post">
+                    <br><br><br>
+                    <h2 style="margin-top: 50px;">Search by Keyword</h2><br>
+                    <input class="keyword" type="text" name="keyword" placeholder="&nbsp;&nbsp;&nbsp;Write the keyword"/><br><br><br><br><br>
+                    <span class="searchkeyword">Search</span>
+                </form>
+            </div>
+        </div>
+    </div>
+<div class="about">
+    <div class="splash fadein">
+        <h1 class="splash-title fade-in">5Tuple은 차세대 예술가들을 위한 플랫폼 입니다</h1>
+    </div> 
+    <!-- 검색창 여는 버튼-->                                                          
+    <span onclick="javascript:openSearchbtn()" id="searchbtn">Search for Image</span>
+</div>
+</div>
+</div>
+    <!-- 메인페이지2-->
+        <div class="box2" style="height: 220%;"> 
+        <div class="black"></div>
+        <div class="box2_bg">
+<section class="timeline">
+    <div class="mainbox2">
+        <div class="col-md-6 fade-inup" data-fade-in-speed="800">우리는 블록체인을 왜 사용할까요?</div>
+    </div>
+  <ul>
+    <li>
+        <p>1</p>
+      <div> 
+        <h1>안전한 거래를 할 수 있습니다</h1>
+        <h3>블록체인은 거래 정보등의 데이터들이 담긴 블록이 사슬처럼 연결되어 한번 기록된 경로는 절대로 변경할 수 없어, 해킹이나 위조가 불가능합니다</h3>
+      </div>
+    </li>
+    <li>
+        <p>2</p>
+        <div>
+        <h1 >비용이 절감됩니다</h1>
+        <h3>현재 저작권료 징수 시스템은 중개기관을 걸쳐 저작권료를 지불하지만 5Tuple은 블록체인을 이용하여 p2p방식으로 거래하기 때문에 중개비용없어 비용이 절감됩니다</h3>
+      </div>
+      
+    </li>
+    <li>
+        <p>3</p>
+        <div>
+        <h1 >보존성이 높습니다</h1>
+        <h3>블록체인에 데이터가 저장되기 때문에 클라우드에서 저작물이 삭제될 경우 블록체인에 저장된 데이터를 불러와서 본인의 것임을 입증할 수 있습니다</h3>
+      </div>
+    </li>
+    <li>
+        <p>4</p>
+        <div>
+        <h1 >등록이 간편합니다</h1>
+        <h3> 저작권 협회는 많은 과정을 거쳐서 등록을 하지만 블록체인을 이용하면 위조를 방지할 수 있어 등록이 간편해 집니다</h3>
+      </div>
+    </li>
+  </ul>
+</section>
+</div>
+</div>
+<div class="box3" >
+    <div class="mainbox3"></div>
+</div>
+    <div class="box4" style="background-color:rgb(122, 172, 182); height: 100%;">
+    <div class="mainbox4">
+        <h2>The Technology</h2>
+        <div class="web">
+            <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) fuente: https://www.flaticon.com , visita mi web: https://starttec.net-->
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 742.8 372.5" style="enable-background:new 0 0 742.8 372.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#575860;}
+	.st1{fill:#4C4D51;}
+	.st2{fill:#27282B;}
+	.st3{fill:#CCCCCC;}
+	.st4{fill:#F2F2F2;}
+	.st5{fill:#83888C;}
+	.st6{fill:#EF8F5B;}
+	.st7{fill:#FFC25F;}
+	.st8{fill:#FFFFFF;}
+	.st9{fill:#EFB245;}
+	.st10{fill:#444455;}
+	.st11{fill:rgb(112, 85, 185);}
+  @keyframes remote {
+      0%, 6%, 30%, 36%, 70%, 76% {
+        opacity: 1;
+      }
+      1%, 5%, 31%, 35%, 71%, 75% {
+        opacity: 0;
+      }
+    }
+    .remote1 {
+      animation: remote 10000ms linear -8000ms infinite;
+    }
+  @keyframes cursor {
+      25%, 30% {
+        transform: translate(-250px, -10px) rotate(60deg);
+      }
+      70% {
+        transform: none;
+      }
+    }
+    .cursor {
+      animation: cursor 7000ms ease-in-out -4000ms infinite;
+      transform-origin: 700px 50px;
+    }
+</style>
+<g>
+	<g>
+		<path class="st0" d="M313.4,348.2H191.5V330c0-5.2-1.5-10.2-4.4-14.5l-13-19.5h156.7l-13,19.5c-2.9,4.3-4.4,9.3-4.4,14.5
+			L313.4,348.2L313.4,348.2z"/>
+		<path class="st0" d="M487.4,304.7h-470c-9.6,0-17.4-7.8-17.4-17.4V17.4C0,7.8,7.8,0,17.4,0h470c9.6,0,17.4,7.8,17.4,17.4v269.8
+			C504.9,296.9,497.1,304.7,487.4,304.7z"/>
+		<path class="st1" d="M478.7,269.8H26.1c-4.8,0-8.7-3.9-8.7-8.7v-235c0-4.8,3.9-8.7,8.7-8.7h452.6c4.8,0,8.7,3.9,8.7,8.7v235
+			C487.4,265.9,483.6,269.8,478.7,269.8z"/>
+		<path class="st0" d="M273.2,287.2h-41.5c-3.3,0-6.3,1.9-7.8,4.8l-6.3,12.6h69.6l-6.3-12.6C279.5,289.1,276.5,287.2,273.2,287.2z"
+			/>
+		<path class="st0" d="M356.9,356.9H148c-4.8,0-8.7-3.9-8.7-8.7l0,0c0-4.8,3.9-8.7,8.7-8.7h208.9c4.8,0,8.7,3.9,8.7,8.7l0,0
+			C365.6,353,361.7,356.9,356.9,356.9z"/>
+		<g>
+			<path class="st2" d="M430.4,231.1H86c-1.9,0-3.5-1.6-3.5-3.5V37.9c0-1.9,1.6-3.5,3.5-3.5h344.4c1.9,0,3.5,1.6,3.5,3.5v189.7
+				C433.9,229.6,432.3,231.1,430.4,231.1z"/>
+			<g class="remote1">
+				<path class="st3" d="M340.4,69.7H195.3c-3.7,0-6.6,3-6.6,6.6V99H347V76.4C347,72.7,344.1,69.7,340.4,69.7z"/>
+				<path class="st4" d="M188.8,103.8v85.3c0,3.7,3,6.6,6.6,6.6h145.1c3.7,0,6.6-3,6.6-6.6v-85.3H188.8z"/>
+				<rect x="188.8" y="99" class="st5" width="158.3" height="4.8"/>
+				<circle class="st6" cx="201.8" cy="84.4" r="3.8"/>
+				<circle class="st7" cx="215.4" cy="84.4" r="3.8"/>
+				<circle class="st8" cx="228.9" cy="84.4" r="3.8"/>
+				<path class="st2" d="M329.6,80.6h-81c-2.1,0-3.8,1.7-3.8,3.8s1.7,3.8,3.8,3.8h81c2.1,0,3.8-1.7,3.8-3.8S331.6,80.6,329.6,80.6z"
+					/>
+			</g>
+			<g>
+				<rect x="114.7" y="63.6" class="st9" width="18.6" height="18.6"/>
+				<rect x="114.7" y="125.4" class="st9" width="18.6" height="18.6"/>
+				<rect x="114.7" y="94.5" class="st9" width="18.6" height="18.6"/>
+				<rect x="114.7" y="156.3" class="st9" width="18.6" height="18.6"/>
+				<rect x="148.8" y="63.6" class="st9" width="18.6" height="18.6"/>
+				<rect x="148.8" y="94.5" class="st9" width="18.6" height="18.6"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<path class="st0" d="M703.7,356.9H363.1c-7,0-12.6-5.6-12.6-12.6v-6.3c0-3.5,2.9-6.3,6.3-6.3H710c3.5,0,6.3,2.9,6.3,6.3v6.3
+			C716.4,351.2,710.7,356.9,703.7,356.9z"/>
+		<path class="st0" d="M554.7,344.3h-42.5c-3.1,0-5.8-1.9-6.9-4.6l-3.4-8H565l-3.4,8C560.4,342.4,557.7,344.3,554.7,344.3z"/>
+		<g>
+			<path class="st0" d="M364.7,356.9h340.7c7,0,12.6-5.6,12.6-12.6H352C352,351.2,357.7,356.9,364.7,356.9z"/>
+			<path class="st0" d="M705.3,331.7H364.7V129.8c0-7,5.6-12.6,12.6-12.6h315.5c7,0,12.6,5.6,12.6,12.6v201.9H705.3z"/>
+		</g>
+		<circle class="st10" cx="533.4" cy="126.6" r="3.1"/>
+		<g>
+			<path class="st2" d="M688,312.7H378.8c-1.7,0-3.1-1.4-3.1-3.1V139.3c0-1.7,1.4-3.1,3.1-3.1H688c1.7,0,3.1,1.4,3.1,3.1v170.3
+				C691.2,311.4,689.7,312.7,688,312.7z"/>
+			<g class="remote1">
+				<path class="st3" d="M607.2,167.8H477c-3.3,0-5.9,2.7-5.9,5.9v20.3h142.1v-20.3C613.2,170.5,610.5,167.8,607.2,167.8z"/>
+				<path class="st4" d="M471.1,198.4V275c0,3.3,2.7,6,6,6h130.2c3.3,0,6-2.7,6-6v-76.6H471.1z"/>
+				<rect x="471.1" y="194.1" class="st5" width="142.1" height="4.3"/>
+				<circle class="st6" cx="482.8" cy="181" r="3.4"/>
+				<circle class="st7" cx="495" cy="181" r="3.4"/>
+				<circle class="st8" cx="507.2" cy="181" r="3.4"/>
+				<path class="st2" d="M597.5,177.6h-72.7c-1.9,0-3.4,1.5-3.4,3.4s1.5,3.4,3.4,3.4h72.7c1.9,0,3.4-1.5,3.4-3.4
+					S599.3,177.6,597.5,177.6z"/>
+			</g>
+			<g>
+				<rect x="404.6" y="162.4" class="st9" width="16.7" height="16.7"/>
+				<rect x="404.6" y="217.8" class="st9" width="16.7" height="16.7"/>
+				<rect x="404.6" y="190.1" class="st9" width="16.7" height="16.7"/>
+				<rect x="404.6" y="245.5" class="st9" width="16.7" height="16.7"/>
+				<rect x="435.2" y="162.4" class="st9" width="16.7" height="16.7"/>
+				<rect x="435.2" y="190.1" class="st9" width="16.7" height="16.7"/>
+			</g>
+		</g>
+	</g>
+	<g class="cursor">
+		<path class="st11" d="M692.4,372.5c-27.7,0-50.4-22.7-50.4-50.4s22.7-50.4,50.4-50.4c27.7,0,50.4,22.7,50.4,50.4
+			S720.1,372.5,692.4,372.5z M692.4,276.5c-25.2,0-45.6,20.4-45.6,45.6s20.4,45.6,45.6,45.6s45.6-20.4,45.6-45.6
+			S717.6,276.5,692.4,276.5z"/>
+		<polygon class="st8" points="683.3,345.3 669.2,298.9 715.6,313 699.7,320.8 714.8,335.9 706.2,344.5 691.1,329.4 		"/>
+	</g>
+</g>
+</svg>
+        </div>
+        <div id="wrap1">
+            <div class="arrow"></div>  
+            <div class="arrow2"></div>  
+            <div class="arrow3"></div>
+            <div class="arrow4"></div>
+            <div class="arrow5"></div>
+            <div class="arrow6"></div>  
+            <div class="arrow7"></div>  
+            <div class="arrow8"></div>
+            <div class="arrow9"></div>
+            <div class="arrow10"></div>
+        </div>
+
+        <div id="wrap2">
+            <div class="arrow"></div>  
+            <div class="arrow2"></div>  
+            <div class="arrow3"></div>
+            <div class="arrow4"></div>
+            <div class="arrow5"></div>
+            <div class="arrow6"></div>  
+            <div class="arrow7"></div>  
+            <div class="arrow8"></div>
+            <div class="arrow9"></div>
+            <div class="arrow10"></div>
+          </div>
+          <div id="wrap3">
+            <div class="arrow"></div>  
+            <div class="arrow2"></div>  
+            <div class="arrow3"></div>
+            <div class="arrow4"></div>
+            <div class="arrow5"></div>
+            <div class="arrow6"></div>  
+            <div class="arrow7"></div>  
+            <div class="arrow8"></div>
+            <div class="arrow9"></div>
+            <div class="arrow10"></div>
+          </div>
+          <div id="wrap4">
+            <div class="arrow"></div>  
+            <div class="arrow2"></div>  
+            <div class="arrow3"></div>
+            <div class="arrow4"></div>
+            <div class="arrow5"></div>
+          </div>
+          <div class="ex_deal">거래시 주소를 보냅니다</div>
+          <div class="ex_enroll">등록·검색시 이미지를 주고받습니다</div>
+          <div class="ex_ether">&nbsp;블록체인 내에서<br> 이더를 송금합니다</div>
+
+        <div class="blockchain">
+            <img src="img/blockchain.png">
+        </div>
+        
+    </div>
+    </div>
+    <div class="box" style="background-color: white; height: 100%; background-size: 1550px;">
+        <div class="mainbox5">
+            <!-- Our team Section -->
+<section id="team" class="team content-section">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h2>Members</h2>
+        </div><!-- /.col-md-12 -->
+  
+        <div class="container">
+          <div class="row">
+              <div class="team-member">
+                <figure>
+                  <img src="img/member1.png" alt="" class="img-responsive">
+                  <figcaption>
+                    <p><br>안녕하세요! 저는 팀장 역할 수행과 백엔드 설계 및 구현을한 오세영 입니다.</p>
+                    <ul>
+                      <li><a href=""><i class="fa fa-twitter fa-2x"></i></a></li>
+                      <li><a href=""><i class="fa fa-linkedin fa-2x"></i></a></li>
+                    </ul>
+                  </figcaption>
+                </figure>
+                <h4>오세영</h4>
+                <p>Team leader<br>Back-End Designer</p>
+              </div><!-- /.team-member-->
+  
+              <div class="team-member">
+                <figure>
+                  <img src="img/member2.png" alt="" class="img-responsive">
+                  <figcaption>
+                    <p><br><br>안녕하세요! 저는 웹 포털 설계 및 구현, 테스트를한 김민정 입니다.</p>
+                    <ul>
+                      <li><a href=""><i class="fa fa-twitter fa-2x"></i></a></li>
+                      <li><a href=""><i class="fa fa-linkedin fa-2x"></i></a></li>
+                    </ul>
+                  </figcaption>
+                </figure>
+                <h4>김민정</h4>
+                <p>Web Potal Designer</p>
+              </div><!-- /.team-member-->
+  
+              <div class="team-member">
+                <figure>
+                  <img src="img/member3.png" alt="" class="img-responsive">
+                  <figcaption>
+                    <p><br>안녕하세요! 저는 블록체인 개발, 벡엔드 설계 및 구현, 프론트엔드 테스트 및 스토리지 설계를한 서지연 입니다.</p>
+                    <ul>
+                      <li><a href=""><i class="fa fa-twitter fa-2x"></i></a></li>
+                      <li><a href=""><i class="fa fa-linkedin fa-2x"></i></a></li>
+                    </ul>
+                  </figcaption>
+                </figure>
+                <h4>서지연</h4>
+                <p>Bolckchain Developer<br>Back-End Designer</p>
+              </div><!-- /.team-member-->
+            </div><!-- /.row -->
+  
+            <div class="row">
+              <div class="team-member">
+                <figure>
+                  <img src="img/member4.png" alt="" class="img-responsive">
+                  <figcaption>
+                    <p><br><br>안녕하세요! 저는 웹 포털 설계 및 구현을 한 이수영 입니다.</p>
+                    <ul>
+                      <li><a href=""><i class="fa fa-twitter fa-2x"></i></a></li>
+                      <li><a href=""><i class="fa fa-linkedin fa-2x"></i></a></li>
+                    </ul>
+                  </figcaption>
+                </figure>
+                <h4>이수영</h4>
+                <p>Web Potal Designer</p>
+              </div><!-- /.team-member-->
+  
+              <div class="team-member">
+                <figure>
+                  <img src="img/member5.png" alt="" class="img-responsive">
+                  <figcaption>
+                    <p><br>안녕하세요! 저는 블록체인 개발, 백엔드 설계 및 구현, KOREN연동 및 테스트를한 한병찬 입니다.</p>
+                    <ul>
+                      <li><a href=""><i class="fa fa-twitter fa-2x"></i></a></li>
+                      <li><a href=""><i class="fa fa-linkedin fa-2x"></i></a></li>
+                    </ul>
+                  </figcaption>
+                </figure>
+                <h4>한병찬</h4>
+                <p>Bolckchain Developer<br>KOREN Server Connector</p>
+              </div><!-- /.team-member-->
+  
+              <div class="team-member">
+                <figure>
+                  <img src="img/member6.png" alt="" class="img-responsive">
+                  <figcaption>
+                    <p><br><br>안녕하세요! 저는 웹 포털 설계 및 구현을한 한정혜 입니다.</p>
+                    <ul>
+                      <li><a href=""><i class="fa fa-twitter fa-2x"></i></a></li>
+                      <li><a href=""><i class="fa fa-linkedin fa-2x"></i></a></li>
+                    </ul>
+                  </figcaption>
+                </figure>
+                <h4>한정혜</h4>
+                <p>Web Potal Designer</p>
+              </div><!-- /.team-member-->
+            </div><!-- /.row -->
+  
+  
+        </div><!-- /.container -->
+  
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </section><!-- /.our-team -->
+        </div>
+    
+  
+  
+    </div>
+    <script>
+    //main3박스 스크롤시 하나씩 나오게
+    (function() {
+
+'use strict';
+
+// define variables
+var items = document.querySelectorAll(".timeline li");
+
+// check if an element is in viewport
+// http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function callbackFunc() {
+  for (var i = 0; i < items.length; i++) {
+    if (isElementInViewport(items[i])) {
+      items[i].classList.add("in-view");
+    }
+  }
+}
+
+// listen for events
+window.addEventListener("load", callbackFunc);
+window.addEventListener("resize", callbackFunc);
+window.addEventListener("scroll", callbackFunc);
+
+})();
+
+/**
+ *  jquery.fade-in.js
+ *  제작 : 베원 (com1.kr)
+ *
+ *  본 코드 사용시 이 주석을 유지해주시기 바랍니다.
+ *  이외에는 제약 없이 사용 가능합니다.
+ */
+
+/*스크롤 시 나오는 텍스트 효과 */
+$(document).ready(function() {
+	$('.fade-inup').css({"opacity":"0","position":"relative","top":"30px"});
+	triggerJqueryFadeIn()
+    $(window).scroll(triggerJqueryFadeIn);
+});
+var animateQueue = new Array();
+var ready = true;
+function triggerJqueryFadeIn() {
+	$('.fade-inup').each( function(){
+		var object_top = $(this).offset().top;
+		var window_bottom = $(window).scrollTop() + $(window).height();
+		if( window_bottom > object_top ){
+			if($(this).css("opacity") == "0") animateQueue.push(this);
+		}
+	}); 
+	triggerJqueryFadeInQueue();
+}
+function triggerJqueryFadeInQueue() {
+	if(animateQueue.length != 0 && ready) {
+		ready = false;
+		$this = animateQueue.shift();
+		var speed = ($($this).attr("data-fade-in-speed") != undefined ? parseInt($($this).attr("data-fade-in-speed")) : 500);
+		$($this).animate({"opacity":"1", "top":"0px"}, speed, function() {
+			$($this).css("position","static");
+			ready = true;
+			triggerJqueryFadeInQueue();
+		});
+	}
+}
+    </script>
+
+    </body>
+</html>
