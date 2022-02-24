@@ -1,0 +1,224 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+header #menuBtn{
+    all: unset;
+    color: black;
+    font-size:35px;
+    cursor:pointer;
+}
+header #searchBtn{
+    all: unset;
+    border-radius: 20px;
+    background-color: rgb(122, 172, 182);
+    color: white;
+    font-size: 15px;
+    margin-top: 10px;
+    padding: 5px 20px;
+    cursor:pointer;
+    box-shadow: 0px 0px 10px gray ;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.about #searchBtn{
+    border-radius: 1px;
+    font-size: 23px;
+    padding: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    top: 440px;
+    box-shadow: 0px 0px 10px rgb(71, 71, 71) ;
+}
+
+#searchbtn:hover{
+    color:white;
+    background-color: #8391A4;
+}
+
+.menubar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(122, 172, 182);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.menubar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #5f5f5f;
+    display: block;
+    transition: 0.8s;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.menubar a:hover {
+    color: #f1f1f1;
+}
+
+.menubar .closeMenubtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+    .menubar {padding-top: 15px;}
+    .menubar a {font-size: 18px;}
+}
+
+
+#searchsection {
+    background-color: rgba(0, 0, 0, 0.616);
+    z-index: 1;
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    transition: 0.5s;
+    border: 1px solid #bcbcbc;
+    font-family: 'Times New Roman', Times, serif;
+}
+.searchbar {
+    height: 430px;
+    width: 1250px;
+    position: fixed;
+    top: 100px;
+    background-color: white;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%);
+    border: 1px solid #bcbcbc;
+    z-index: 2;
+}
+
+.searchbar .left-section {
+    float: left;
+    width: 33%;
+}
+.searchbar .left-section .name {
+    height: 30px;
+    width: 300px;
+}
+
+.searchbar .center-section {
+    float: left;
+    width: 33%;
+}
+
+.searchbar .center-section .imagefile {
+    height: 30px;
+    width: 250px;
+}
+
+.searchbar .right-section {
+    float: right;
+    width: 33%;
+}
+
+.searchbar .right-section .keyword {
+    height: 30px;
+    width: 300px;
+}
+
+.searchbar .closeSearchbtn {
+    text-decoration: none;
+    font-size: 40px;
+    color: black;
+    position: absolute;
+    right: 1%;
+    top: 0px;
+    cursor: pointer;
+}
+
+.searchbar .closeSearchbtn:hover {
+    color: gray;
+}
+
+.searchbar .searchname {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;   
+    background-color: rgb(122, 172, 182);
+    color: white;
+    font-size: 17px;
+    padding: 12px 25px 12px 25px;
+    cursor:pointer;
+    position: relative;
+    box-shadow: 0px 0px 3px gray ;
+}
+
+.searchbar .searchname:hover{
+    color:white;
+    background-color: grey;
+}
+
+.searchbar .searchfile {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;   
+    background-color: rgb(122, 172, 182);
+    color: white;
+    font-size: 17px;
+    padding: 12px 25px 12px 25px;
+    cursor:pointer;
+    position: relative;
+    box-shadow: 0px 0px 3px gray ;
+}
+.searchbar .searchfile:hover{
+    color:white;
+    background-color: grey;
+}
+
+.searchbar .searchkeyword {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;   
+    background-color: rgb(122, 172, 182);
+    color: white;
+    font-size: 17px;
+    padding: 12px 25px 12px 25px;
+    cursor:pointer;
+    position: relative;
+    box-shadow: 0px 0px 3px gray ;
+}
+
+.searchbar .searchkeyword:hover{
+    color:white;
+    background-color: grey;
+}
+
+@media screen and (max-height: 450px) {
+    .searchbar {padding-top: 15px;}
+    .searchbar a {font-size: 18px;}
+  }
+  
+.v1 {
+    border-width: 0.1px;
+    height: 350px;
+    position: absolute;
+    left: 33%;
+    top: 40px;
+    border-style: dashed;
+  }
+.v2 {
+    border-width: 0.1px;
+    height: 350px;
+    position: absolute;
+    right: 33%;
+    top: 40px;
+    border-style: dashed;  
+}
+

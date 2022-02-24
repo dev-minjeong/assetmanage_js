@@ -18,9 +18,9 @@
         <script src="js\login.js"></script>
         <script src="js\scroll.js"></script>
         <script src="js\main3.js"></script>
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>-->
     </head>
-    <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
+    <body> <!--oncontextmenu='return false' onselectstart='return false' ondragstart='return false'-->
 
     <!-- 메인페이지1-->
     <div class="box" style="background-image: url(img/mainbg.jpg); background-size: 1550px;">
@@ -36,14 +36,14 @@
         <!--로고-->
         <div class="logo">
             <svg version="1.1" viewBox="0 0 700 300">
-              <symbol id="fade-text">
-                <text x="45%" y="40%" text-anchor="middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5Tuple</text>
-                <text x="55%" y="63%" text-anchor="middle" style="font-size: 38px; font-weight:normal;">ART GALLERY WITH BLOCKCHAIN</text>
-              </symbol>
-              <g>
-                <use class="stroke" xlink:href="#fade-text"/>
-                <use class="fill" xlink:href="#fade-text"/>
-              </g>
+                <symbol id="fade-text">
+                    <text x="45%" y="40%" text-anchor="middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5Tuple</text>
+                    <text x="55%" y="63%" text-anchor="middle" style="font-size: 38px; font-weight:normal;">ART GALLERY WITH BLOCKCHAIN</text>
+                </symbol>
+                <g>
+                    <use class="stroke" xlink:href="#fade-text"/>
+                    <use class="fill" xlink:href="#fade-text"/>
+                </g>
             </svg>    
         </div>
         
@@ -478,7 +478,7 @@ window.addEventListener("scroll", callbackFunc);
  *  이외에는 제약 없이 사용 가능합니다.
  */
 
-/*스크롤 시 나오는 텍스트 효과 */
+/*스크롤 시 나오는 텍스트 효과 
 $(document).ready(function() {
 	$('.fade-inup').css({"opacity":"0","position":"relative","top":"30px"});
 	triggerJqueryFadeIn()
@@ -507,7 +507,7 @@ function triggerJqueryFadeInQueue() {
 			triggerJqueryFadeInQueue();
 		});
 	}
-}
+}*/
     </script>
 
     </body>

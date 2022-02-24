@@ -1,51 +1,39 @@
-* {
+body {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
-
-h1 {
-    position: absolute;
-    top: 120px;
-    left: 15%;
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 60px;
+}
+main h1 {
     font-size: 270%;
     color: rgb(122, 172, 182);
     font-family: 'Times New Roman', Times, serif;
+    padding-left: 30px;
 }
-
-.row {
-    margin-left: 5%;
-    margin-right: 5%;
-    position: relative;
-    top: 230px;
+.img-wrap {
+    display: flex ;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 20px;
 }
-.row img{
-    float: left;
-    width: 300px;
+.img-wrap img{
+    height: 270px;
+    width: auto;
     padding: 10px;
-    display: flex;
-    position: sticky;
-}
-
-.row > .column {
-    position: relative;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.column {
-    float: left;
-    width: 25%;
-}
-
-/* 이미지 애니메이션 효과*/
-img.hover-shadow {
+    object-fit: scale-down;
+    cursor: pointer;
     transition: 0.3s;
 }
-.hover-shadow:hover {
+/* 이미지 애니메이션 효과*/
+.img-wrap img:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -75,6 +63,9 @@ img.hover-shadow {
 /*상세 페이지 각각*/
 .mySlides {
     display: none;
+}
+#imgInfo {
+    display: block;
 }
 .myimg {
     display: flex;
@@ -156,10 +147,6 @@ img.hover-shadow {
     cursor: pointer;
 }
 
-.cursor {
-    cursor: pointer;
-}
-
 
 .caption-container {
     text-align: center;
@@ -172,14 +159,6 @@ img.hover-shadow {
     .page {padding-top: 15px;}
     .page .downloadbtn {font-size: 18px;}
 }
-
-html,body{ 
-    margin:0; 
-    padding:0; 
-    width:100%; 
-    height:100%;;
-}
-
 /*license 버튼*/
 .licensebtngroup {
     position: relative;

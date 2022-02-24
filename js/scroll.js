@@ -1,4 +1,4 @@
-/* 메인페이지 스크롤시 화면 전환되는 효과 */
+/* 메인페이지 스크롤시 화면 전환되는 효과 
 window.onload = function () {
     var elm = ".box";
     $(elm).each(function (index) {
@@ -30,7 +30,7 @@ window.onload = function () {
                     }catch(e){}
                 }
             }
-                     
+
             // 화면 이동 0.8초(800)
             $("html,body").stop().animate({
                 scrollTop: moveTop + 'px'
@@ -41,4 +41,4 @@ window.onload = function () {
             });
         });
     });
-}
+} */
