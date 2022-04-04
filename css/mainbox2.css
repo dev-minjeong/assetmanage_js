@@ -80,6 +80,9 @@
   padding: 15px;
   background: rgba(255, 255, 255, 0.671);
   z-index: 4;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
 }
 
 .timeline ul li div h1 {
@@ -111,10 +114,12 @@
 
 .timeline ul li:nth-child(odd) div {
   left: 120px;
+  transform: translate3d(200px, 0, 0);
 }
 
 .timeline ul li:nth-child(even) div {
   left: -660px;
+  transform: translate3d(-200px, 0, 0);
 }
 
 .timeline ul li::after {
@@ -124,20 +129,6 @@
 .timeline ul li.in-view::after {
   background: rgb(122, 172, 182);
   z-index: 4;
-}
-
-.timeline ul li div {
-  visibility: hidden;
-  opacity: 0;
-  transition: all .5s ease-in-out;
-}
-
-.timeline ul li:nth-child(odd) div {
-  transform: translate3d(200px, 0, 0);
-}
-
-.timeline ul li:nth-child(even) div {
-  transform: translate3d(-200px, 0, 0);
 }
 
 .timeline ul li.in-view div {

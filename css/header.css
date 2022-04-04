@@ -79,14 +79,13 @@ header #searchBtn{
 #searchsection {
     background-color: rgba(0, 0, 0, 0.616);
     z-index: 1;
-    display: none;
     height: 100%;
     width: 100%;
-    position: fixed;
     overflow: hidden;
     transition: 0.5s;
     border: 1px solid #bcbcbc;
     font-family: 'Times New Roman', Times, serif;
+    display: none;
 }
 .searchbar {
     height: 430px;
