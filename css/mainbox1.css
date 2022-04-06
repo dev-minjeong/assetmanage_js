@@ -1,150 +1,169 @@
 /*로고 텍스트효과*/
 .logo {
-	position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    top: 3%;
-	width: 180px;
-	height: auto;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 3%;
+  width: 180px;
+  height: auto;
 }
 
-
 .stroke {
-    stroke: #000;
-    stroke-width: 1px;
-    stroke-dasharray: 0 250;
-    stroke-opacity: 1;
-    fill: none;
-    -webkit-animation: stroke_offset 5s infinite;
-    animation: stroke_offset 5s infinite;
-    -webkit-animation-timing-function: cubic-bezier(.25, .46, .45, .94);
-    animation-timing-function: cubic-bezier(.25, .46, .45, .94)
+  stroke: #000;
+  stroke-width: 1px;
+  stroke-dasharray: 0 250;
+  stroke-opacity: 1;
+  fill: none;
+  -webkit-animation: stroke_offset 5s infinite;
+  animation: stroke_offset 5s infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 @-webkit-keyframes stroke_offset {
-    100%,
-    25% {
-        stroke-dasharray: 0 250;
-        stroke-opacity: 1
-    }
-    50%,
-    75% {
-        stroke-dasharray: 250 0;
-        stroke-opacity: .75
-    }
-    55%,
-    70% {
-        stroke-dasharray: 250 0;
-        stroke-opacity: 0
-    }
+  100%,
+  25% {
+    stroke-dasharray: 0 250;
+    stroke-opacity: 1;
+  }
+  50%,
+  75% {
+    stroke-dasharray: 250 0;
+    stroke-opacity: 0.75;
+  }
+  55%,
+  70% {
+    stroke-dasharray: 250 0;
+    stroke-opacity: 0;
+  }
 }
 
 @keyframes stroke_offset {
-    100%,
-    25% {
-        stroke-dasharray: 0 250;
-        stroke-opacity: 1
-    }
-    50%,
-    75% {
-        stroke-dasharray: 250 0;
-        stroke-opacity: .75
-    }
-    55%,
-    70% {
-        stroke-dasharray: 250 0;
-        stroke-opacity: 0
-    }
+  100%,
+  25% {
+    stroke-dasharray: 0 250;
+    stroke-opacity: 1;
+  }
+  50%,
+  75% {
+    stroke-dasharray: 250 0;
+    stroke-opacity: 0.75;
+  }
+  55%,
+  70% {
+    stroke-dasharray: 250 0;
+    stroke-opacity: 0;
+  }
 }
 
 .fill {
-    fill: #000;
-    fill-opacity: 0;
-    -webkit-animation: fill_offset 5s infinite;
-    animation: fill_offset 5s infinite;
-    -webkit-animation-timing-function: cubic-bezier(.25, .46, .45, .94);
-    animation-timing-function: cubic-bezier(.25, .46, .45, .94)
+  fill: #000;
+  fill-opacity: 0;
+  -webkit-animation: fill_offset 5s infinite;
+  animation: fill_offset 5s infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 @-webkit-keyframes fill_offset {
-    100%,
-    25%,
-    35%,
-    90% {
-        fill-opacity: 0
-    }
-    50%,
-    70% {
-        fill-opacity: 1
-    }
+  100%,
+  25%,
+  35%,
+  90% {
+    fill-opacity: 0;
+  }
+  50%,
+  70% {
+    fill-opacity: 1;
+  }
 }
 
 @keyframes fill_offset {
-    100%,
-    25%,
-    35%,
-    90% {
-        fill-opacity: 0
-    }
-    50%,
-    70% {
-        fill-opacity: 1
-    }
+  100%,
+  25%,
+  35%,
+  90% {
+    fill-opacity: 0;
+  }
+  50%,
+  70% {
+    fill-opacity: 1;
+  }
 }
 
 #fade-text {
-    font-family: 'Times New Roman', Times, serif;
-	font-size: 110px;
-	text-align: center;
-	font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 110px;
+  text-align: center;
+  font-weight: bold;
 }
 
 .about {
-    background-color: rgba(255, 255, 255, 0);
-    width: 1000px;
-    height: 650px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    top: 70px;
-    
+  background-color: rgba(255, 255, 255, 0);
+  width: 1000px;
+  height: 650px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 70px;
 }
 
 /* 메인첫페이지 텍스트효과*/
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 .fade-in {
-    opacity:0;
-    -webkit-animation:fadeIn ease-in 1; 
-    -moz-animation:fadeIn ease-in 1;
-    animation:fadeIn ease-in 1;
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
 
-    -webkit-animation-fill-mode:forwards;  
-    -moz-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 
-    -webkit-animation-duration:0.3s;
-    -moz-animation-duration:0.3s;
-    animation-duration:0.3s;
+  -webkit-animation-duration: 0.3s;
+  -moz-animation-duration: 0.3s;
+  animation-duration: 0.3s;
 
-    -webkit-animation-delay: 0.5s;
-    -moz-animation-delay: 0.5s;
-    animation-delay: 0.5s; /*delay before the background-image appears*/
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s; /*delay before the background-image appears*/
 }
 .splash {
-     position: absolute;
-     top: 20%;
-     font: normal 20px "Open Sans", Arial, Verdana,sans-serif; 
-     color: #333;
-     left: 60px;
- }
+  position: absolute;
+  top: 20%;
+  font: normal 20px 'Open Sans', Arial, Verdana, sans-serif;
+  color: #333;
+  left: 60px;
+}
 
-.splash-title { 
-    color: #fff;
-    text-shadow: 1px 1px 10px #000;
-    -webkit-animation-delay: 1s;
-    -moz-animation-delay: 1s;
-    animation-delay: 1s; /*delay before the title appears*/
+.splash-title {
+  color: #fff;
+  text-shadow: 1px 1px 10px #000;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s; /*delay before the title appears*/
 }

@@ -1,6 +1,11 @@
+const openMenuBtn = document.querySelector('#menubtn_group');
+const closeMenuBtn = document.querySelector('#myMenubar').firstChild;
+const menuBar = document.querySelector('#myMenubar');
+
 function openMenubtn() {
-    document.getElementById("myMenubar").style.width = "300px";
+  menuBar.style.setProperty('display', 'block');
 }
 function closeMenubtn() {
-    document.getElementById("myMenubar").style.width = "0";
+  menuBar.style.setProperty('display', 'none');
 }
+openMenuBtn.addEventListener('click', openMenubtn);

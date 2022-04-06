@@ -1,0 +1,21 @@
+#menubtn_group {
+  cursor: pointer;
+}
+.menubar {
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background-color: black;
+  z-index: 100;
+  padding: 40px;
+}
+.menubar a {
+  position: relative;
+  text-decoration: none;
+  color: cadetblue;
+  cursor: pointer;
+  font-size: 25px;
+}
