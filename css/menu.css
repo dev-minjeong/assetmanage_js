@@ -1,5 +1,11 @@
 #menubtn_group {
   cursor: pointer;
+  position: fixed;
+  margin: 30px;
+  font-size: 30px;
+  font-weight: 700;
+  color: black;
+  z-index: 100;
 }
 .menubar {
   position: fixed;
@@ -17,5 +23,6 @@
   text-decoration: none;
   color: cadetblue;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 30px;
+  line-height: 50px;
 }
