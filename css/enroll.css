@@ -1,9 +1,18 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 1150px;
+}
+/* 배경 */
 .enrollbg {
   width: 100%;
   height: 100%;
   position: relative;
 }
-#contents {
+/* 등록 구역 */
+.enroll_contents {
   background-color: rgba(255, 255, 255, 0.856);
   position: absolute;
   left: 50%;
@@ -12,58 +21,53 @@
   height: 900px;
   width: 780px;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
-.enroll {
-  position: absolute;
-  margin-top: 150px;
-  left: 50%;
-  transform: translate(-50%);
-}
-
-#resetbtn {
-  background-color: rgb(32, 32, 32);
-  color: white;
-  padding: 5px 21px 8px 21px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-h1 {
-  position: absolute;
+/* 제목 */
+.enroll_contents h1 {
   left: 15px;
   font-size: 50px;
   color: rgb(122, 172, 182);
   font-family: 'Times New Roman', Times, serif;
   margin: 50px;
 }
-
-label.title {
+/* 등록 */
+.enroll_contents .enroll {
+  justify-content: center;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.enroll .element {
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.enroll .imgfile {
+  display: flex;
+  flex-direction: column;
+}
+.element .blank {
+  border: solid 1.2px rgb(133, 133, 133);
+  height: 29px;
+  width: 250px;
+  font-size: 12px;
+}
+.element label {
   font-weight: bold;
   width: 50px;
   color: black;
   margin-right: 5px;
   font-size: 120%;
 }
-.blank {
-  border: solid 1.2px rgb(133, 133, 133);
-  height: 29px;
-  width: 250px;
-  font-size: 12px;
-}
-.blank_hash {
-  border: solid 1.2px rgb(133, 133, 133);
-  height: 29px;
-  width: 180px;
-}
-.hashbtn {
+.element .hashbtn {
   background-color: rgb(32, 32, 32);
   color: white;
   padding: 5px 21px 8px 21px;
   font-size: 14px;
   cursor: pointer;
 }
-
-.enrollbtn {
+.submit .enrollbtn {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -79,13 +83,11 @@ label.title {
   box-shadow: 0px 0px 10px gray;
   font-family: 'Times New Roman', Times, serif;
 }
-
-.enrollbtn:hover {
+.submit .enrollbtn:hover {
   color: white;
   background-color: #8391a4;
 }
-
-.resetbtn {
+.submit .resetbtn {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -101,12 +103,11 @@ label.title {
   box-shadow: 0px 0px 10px gray;
   font-family: 'Times New Roman', Times, serif;
 }
-
-.resetbtn:hover {
+.submit .resetbtn:hover {
   color: white;
   background-color: #8391a4;
 }
-
+/* 하단 영역 */
 #footer {
   clear: both;
   padding: 20px;
@@ -124,13 +125,6 @@ ul li {
   height: 300px;
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 1150px;
-}
 #menubtn_group {
   color: aliceblue;
 }
@@ -146,6 +140,6 @@ body {
   h1 {
     left: 50%;
     transform: translate(-50%);
-    margin: 55px 0;
+    margin: 50px;
   }
 }

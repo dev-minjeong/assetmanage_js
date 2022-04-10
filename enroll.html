@@ -22,12 +22,10 @@
 
       <!-- 메뉴바 여는버튼-->
       <span id="menubtn_group">&#9776;</span>
-
       <!-- 검색창 여는 버튼
       <span onclick="javascript:openSearchbtn()" id="searchbtn"
         >Search for Image</span
       >-->
-
       <!-- 메뉴 바-->
       <div id="myMenubar" class="menubar">
         <a
@@ -93,58 +91,50 @@
         </div>
       </div>-->
       <!-- 등록 구역 -->
-      <div id="contents">
+      <article id="contents" class="enroll_contents">
         <form action="/register/regist" method="post">
           <h1>Enroll</h1>
-          <br /><br />
-          <div class="enroll">
-            &emsp;&nbsp;<label for="name" class="title">Title</label
-            >&emsp;&emsp;&nbsp;
-            <input
-              type="text"
-              class="blank"
-              id="title"
-              name="title"
-            /><br /><br />
-
-            &emsp;<label for="name" class="title">Name</label>&emsp;&nbsp;&nbsp;
-            <input
-              type="text"
-              class="blank"
-              id="name"
-              name="name"
-            /><br /><br />
-
-            <label for="keyword" class="title">KeyWord</label>&emsp;
-            <input
-              type="text"
-              class="blank"
-              id="keyword"
-              placeholder="   ex) apple"
-              name="keyword"
-            /><br /><br />
-
-            <label for="hash_" class="title">Hash Value</label>&nbsp;
-            <input
-              type="text"
-              class="blank_hash"
-              id="hash_"
-              name="hash"
-            />&emsp; <span class="hashbtn">Hash</span><br /><br />
-
-            &emsp;&emsp;&nbsp;
-            <label for="fileupload" class="title">Img File</label>&emsp;
-            <input type="file" id="fileupload" name="image" /><br /><br />
-            &emsp;&emsp;&emsp;
-            <img src="" id="imgpreview" /><br /><br /><br /><br />
-
-            &emsp;&emsp;&emsp;&emsp;
+          <section class="enroll">
+            <div class="element title">
+              <label for="name" class="title">Title</label>
+              <input type="text" class="blank" id="title" name="title" />
+            </div>
+            <div class="element name">
+              <label for="name" class="title">Name</label>
+              <input type="text" class="blank" id="name" name="name" />
+            </div>
+            <div class="element">
+              <label for="keyword" class="title">KeyWord</label>
+              <input
+                type="text"
+                class="blank"
+                id="keyword"
+                placeholder="   ex) apple"
+                name="keyword"
+              />
+            </div>
+            <div class="element">
+              <label for="hash_" class="title">Hash Value</label>
+              <input
+                type="text"
+                class="blank_hash blank"
+                id="hash_"
+                name="hash"
+              />
+              <span class="hashbtn">Hash</span>
+            </div>
+            <div class="element imgfile">
+              <label for="fileupload" class="title">ImgFile</label>
+              <input type="file" id="fileupload" name="image" />
+              <img src="" id="imgpreview" />
+            </div>
+          </section>
+          <section class="submit">
             <input type="submit" value="Enroll" class="enrollbtn" />
-            &emsp;&emsp;&emsp;&emsp;
             <input type="reset" value="Reset" class="resetbtn" />
-          </div>
+          </section>
         </form>
-      </div>
+      </article>
     </div>
 
     <script src="js\search.js"></script>
@@ -153,45 +143,11 @@
     <script src="js\register.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <script src="js\imgshow.js"></script>
+    <script src="js/enroll.js"></script>
     <!-- hash 관련 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/sha1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/sha1-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/lib-typedarrays-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
-    <script>
-      $(document).ready(function () {
-        $('.hashbtn').click(function () {
-          var reader = new FileReader(); //define a Reader
-          var file = $('#fileupload')[0].files[0]; //get the File object
-          if (!file) {
-            alert('no file selected');
-            return;
-          } //check if user selected a file
-
-          reader.onload = function (f) {
-            var file_result = this.result; // this == reader, get the loaded file "result"
-            var file_wordArr = CryptoJS.lib.WordArray.create(file_result); //convert blob to WordArray , see https://code.google.com/p/crypto-js/issues/detail?id=67
-            var sha1_hash = CryptoJS.SHA1(file_wordArr); //calculate SHA1 hash
-            document.getElementById('hash_').value = sha1_hash.toString();
-          };
-          reader.readAsArrayBuffer(file); //read file as ArrayBuffer
-        });
-      });
-      function readURL(input) {
-        if (input.files && input.files[0]) {
-          var reader = new FileReader(); //파일리더 객체인 reader
-
-          reader.onload = function (e) {
-            // 파일리더는 문서가 다 읽히면 보여줌
-            document.getElementById('imgpreview').src = e.target.result; //이미지 URL 출력
-          };
-          reader.readAsDataURL(input.files[0]); //0번째 배열인 URL 읽어오기
-        }
-      }
-      $('#fileupload').change(function () {
-        //이미지가 바뀌면
-        readURL(this); //URL을 다시 읽어온다
-      });
-    </script>
   </body>
 </html>
