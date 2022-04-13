@@ -6,12 +6,26 @@
         <link rel="stylesheet" href="css\header.css">
         <link rel="stylesheet" href="css\login.css">
         <link rel="stylesheet" href="css\imgcollection.css">
+        <link rel="stylesheet" href="css\menu.css">
     </head>
     <body> 
         <div class="flex">
             <header>
-                <!-- 메뉴 버튼-->
-                <input type="button" id="menuBtn" onclick="openMenubtn()" style="color: black;" value="&#9776;"></input>
+                <!-- 메뉴바 여는버튼-->
+                <span id="menubtn_group">&#9776; </span>
+                <!-- 메뉴 바-->
+                <div id="myMenubar" class="menubar">
+                <a
+                    href="javascript:void(0)"
+                    class="closeMenubtn"
+                    onclick="closeMenubtn()"
+                    >&times;</a
+                ><br /><br />
+                <a href="mainpage.html" target="_self">Home</a><br />
+                <a href="enroll.html" target="_self">Enroll</a><br />
+                <a href="imgcollection.html" target="_self">Art Collection</a><br />
+                <a href="license.html" target="_self">License</a>
+                </div>
                 <!-- 검색 버튼-->                                                          
                 <input type="button" onclick="javascript:openSearchbtn()" id="searchBtn" value="Search for Image"></input>
             </header>
@@ -38,15 +52,6 @@
                 </div>
             </main>
         </div>
-        
-        
-        <!-- 메뉴 바-->
-        <div id="myMenubar" class="menubar">
-            <a href="javascript:void(0)" class="closeMenubtn" onclick="closeMenubtn()">&times;</a><br><br>
-            <a href="mainpage.html" target="_self">Home</a><br>
-            <a href="enroll.html" target="_self">Enroll</a><br>
-            <a href="imgcollection.html" target="_self">Art Collection</a><br>
-            <a href="license.html" target="_self">License</a>
         </div>
         <!--검색 창-->
         <div id="searchsection">

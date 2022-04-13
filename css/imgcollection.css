@@ -1,52 +1,52 @@
 body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 .flex {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 main {
-    display: flex;
-    flex-direction: column;
-    padding: 50px 60px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 60px 50px;
 }
 main h1 {
-    font-size: 270%;
-    color: rgb(122, 172, 182);
-    font-family: 'Times New Roman', Times, serif;
-    padding-left: 30px;
+  font-size: 270%;
+  color: rgb(122, 172, 182);
+  font-family: 'Times New Roman', Times, serif;
+  padding-left: 30px;
 }
 .img-wrap {
-    display: flex ;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 50px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0px 20px;
 }
-.img-wrap img{
-    height: 270px;
-    width: auto;
-    padding: 10px;
-    object-fit: scale-down;
-    cursor: pointer;
-    transition: 0.3s;
+.img-wrap img {
+  height: 270px;
+  width: auto;
+  padding: 10px;
+  object-fit: scale-down;
+  cursor: pointer;
+  transition: 0.3s;
 }
 /* 이미지 애니메이션 효과*/
 .img-wrap img:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*상세페이지 전체*/
 .popup {
-    display: block;
-    position: fixed;
-    top: 0;
-    background-color: rgba(255, 192, 203, 0.356);
-    height: 100%;
-    width: 100%;
-    z-index: 100;
+  display: block;
+  position: fixed;
+  top: 0;
+  background-color: rgba(255, 192, 203, 0.356);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
 }
 .hidden {
-    display: none;
+  display: none;
 }
